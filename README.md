@@ -1,0 +1,2 @@
+# supinski_szkola
+szkola
