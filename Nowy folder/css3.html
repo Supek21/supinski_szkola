@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="">
+.square {
+width				:120px;
+height				:100px;
+border				:20px dotted #bb6600;
+background-color 	:#ffddaa;
+background-image 	:url("square.jpg");
+background-repeat	:no-repeat;
+padding				:20px;
+background-clip		:border-box;
+background-origin	:border-box;
+font-size			:12px;
+}
+
+.inner {
+width			:120px;
+height			:120px;
+border			:1px dashed blue;
+vertical-align	:text-bottom;
+}
+.outer {
+width			:200px;
+height			:200px;
+border			:1px solid gray;
+float			:left;
+margin			:10px;
+}
+</style>
+</head>
+<body>
+<div class='outer'>
+<div class='square' style='background-origin:border-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie: border-box <br> początek: border-box
+</div>
+</div>
+</div>
+
+<div class='outer'>
+<div class='square' style='background-origin:padding-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie: padding-box <br> początek: padding-box
+</div>
+</div>
+</div>
+
+<div class='outer'>
+<div class='square' style='background-origin:content-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie:content-box <br> początek: content-box
+</div>
+</div>
+</div>
+
+<div class='outer'>
+<div class='square' style='background-clip :padding-box ;background-origin:border-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie:border-box <br> początek: border-box
+</div>
+</div>
+</div>
+
+<div class='outer'>
+<div class='square' style='background-clip :padding-box ;background-origin:padding-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie:border-box <br> początek: padding-box
+</div>
+</div>
+</div>
+
+<div class='outer'>
+<div class='square' style='background-clip :padding-box ;background-origin:content-box;'>
+<div class='inner'><br><br><br><br><br><br>
+przycięcie:border-box <br> początek: content-box
+</div>
+</div>
+</div>
+
+</body>
+</html>
